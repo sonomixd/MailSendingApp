@@ -1,0 +1,8 @@
+databaseChangeLog: 
+  - changeSet:
+      id: 1
+      author: ikonomis
+      comment: "Insert template default data"
+      changes:
+        - sql: |-
+              INSERT INTO mail.template (template_key, data) VALUES ('mail.welcome', '<p>Hello</p>');

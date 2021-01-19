@@ -1,0 +1,22 @@
+databaseChangeLog: 
+  - changeSet:
+      id: 1
+      author: ikonomis
+      changes:
+        - schemaName: mail
+        - createTable:
+            tableName: template
+            columns:  
+              - column:  
+                  name: id  
+                  type: int  
+                  autoIncrement: true  
+                  constraints:  
+                    primaryKey: true  
+                    nullable: false 
+              - column:
+                  name: template_key
+                  type: varchar(50)
+              - column:
+                  name: data
+                  type: blob

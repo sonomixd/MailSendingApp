@@ -1,0 +1,7 @@
+﻿databaseChangeLog:
+  - include:
+      file: 01-create-template-table.yaml
+      relativeToChangelogFile: true 
+  - include:
+      file: 02-create-default-template-data.yaml
+      relativeToChangelogFile: true
