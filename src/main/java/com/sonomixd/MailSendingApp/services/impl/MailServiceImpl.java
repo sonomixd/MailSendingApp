@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class MailServiceImpl implements MailService {
 
     @Override
-    public void generateAndSendMail(MailSendRequest request) throws ServiceException {
+    public void generateAndSendMail(MailSendRequest request) {
 
     }
 }

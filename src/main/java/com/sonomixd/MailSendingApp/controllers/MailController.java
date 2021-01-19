@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class MailController {
 
 	@Autowired
-	private MailService notificationService;
+	private MailService mailService;
 
 	@PostMapping(path = "/mail/send", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void sendMail(@RequestBody MailSendRequest request) {
 
-		notificationService.generateAndSendMail(request);
+		mailService.generateAndSendMail(request);
 	}
 }
