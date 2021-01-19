@@ -4,22 +4,32 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "template")
 public class Template implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "template_key")
-    private String key;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
 
-    @Column(name = "data")
-    private byte[] data;
-
-    public String getKey() {
-        return key;
+    public Long getId() {
+        return id;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private String templateKey;
+
+    private byte[] data;
+
+    public String getTemplateKey() {
+        return templateKey;
+    }
+
+    public void setTemplateKey(String templateKey) {
+        this.templateKey = templateKey;
     }
 
     public byte[] getData() {
